@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ページ内リンクの遷移先調整 */
+/* :target::before {
+  content: "";
+  display: block;
+  height: 70px;
+  margin-top: -70px;
+  visibility: hidden;
+} */
+
+/* Katex横スクロール可能にする */
+.math.math-display {
+  @apply overflow-x-auto;
+}
+.red {
+  color: red;
+}
+.mylink {
+  @apply hover:text-cOrange;
+}
+.mydetail {
+  @apply border rounded-md shadow-sm;
+}
+.mytable {
+  @apply whitespace-nowrap;
+}
+.mytable__wrapper {
+  @apply overflow-x-auto;
+}
+.mydetail__summary {
+  @apply px-3 py-2 hover:opacity-70 cursor-pointer;
+}
+.mydetail__others {
+  @apply p-3;
+}
+.codeblock {
+  @apply relative mb-6;
+}
+.codeblock__btn__wrapper {
+  @apply opacity-0 group-hover:opacity-100 transition-opacity duration-300;
+}
+.codeblock__btn {
+  @apply absolute w-[70px] h-[30px] top-2 right-2 hover:opacity-80  flex justify-center items-center rounded-sm  cursor-pointer  bg-sGray;
+}
+.codeblock__inline {
+  @apply mx-1 rounded-[3.5px] bg-bgCodeGray py-0.5 px-1 text-cBlack;
+}
+#footnote-label {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* Youtube用 */
+.item-movie {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+}
+.item-movie iframe {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* tableのサイズ調整 */
+/* table {
+  width: auto;
+} */
+
+html {
+  @apply bg-bgGray;
+  @apply text-cBlack;
+  @apply text-base;
+  @apply leading-base;
+}
+body {
+  @apply min-h-screen;
+  @apply relative;
+}
+code {
+  @apply rounded-lg;
+}
+/* details {
+  @apply border rounded-md shadow-sm;
+}
+summary {
+  @apply px-3 py-2 hover:opacity-70 cursor-pointer;
+} */
+.hover-orange {
+  @apply hover:underline hover:text-cOrange;
+}
+::selection {
+  @apply bg-cOrange text-white;
+}
+
+.hr {
+  @apply mb-2.5 border-b border-dashed border-sGray;
+}
+.box {
+  @apply shadow-md bg-white rounded-tl-[5px] rounded-br-[5px] rounded-tr-[25px] rounded-bl-[25px];
+}
